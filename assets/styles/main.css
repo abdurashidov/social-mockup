@@ -1,0 +1,148 @@
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/roboto-v20-latin-500.woff2'),
+         url('../fonts/roboto-v20-latin-500.woff');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: bold;
+    src: url('../fonts/roboto-v20-latin-700.woff2'),
+    url('../fonts/roboto-v20-latin-700.woff');
+}
+
+:root {
+    --color-bg-base: #fafafa;
+    --color-bg-card: #ffffff;
+    --color-bg-post: #ffffff;
+    --color-bg-post-contrast: #fafafa;
+    --color-bg-divider: #f5f5f5;
+    --color-bg-primary: #0178ff;
+    --color-bg-icon: #d9d9d9;
+
+    --color-typo-primary: #808080;
+    --color-typo-secondary: #b3b3b3;
+    --color-typo-base: #999999;
+
+    --font-family: 'Roboto', 'Arial', sans-serif;
+    --font-size: 1rem;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    font-size: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    background-color: var(--color-bg-base);
+}
+
+.icon {
+    display: inline-flex;
+    fill: var(--color-bg-icon);
+}
+
+.button {
+    display: inline-flex;
+    padding: 0.5rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.button:hover .icon {
+    fill: var(--color-typo-base);
+}
+
+.button--icon {
+    padding: 0;
+}
+
+.header {
+    height: 3.75rem;
+    background-color: var(--color-bg-post);
+    color: var(--color-typo-secondary);
+}
+
+.header__container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    max-width: 90rem;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.header__layout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 1 1 auto;
+    padding: 0 1.875rem;
+    box-sizing: border-box;
+}
+
+.header__layout--menu {
+    flex-grow: 0;
+    width: 16.875rem;
+    border-right: 0.125rem solid var(--color-bg-divider);
+}
+
+.header__layout--controls {
+    flex-grow: 0;
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+}
+
+.search__icon {
+    margin-right: 0.75rem;
+}
+
+.search__input {
+    display: inline-block;
+    font-size: 0.875rem;
+    font-family: var(--font-family);
+    color: var(--color-typo-primary);
+    border: none;
+    outline: none;
+}
+
+.user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 1.75rem;
+    color: var(--color-typo-base);
+    text-decoration: none;
+}
+
+.user__avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+}
+
+.user__title {
+    padding-left: 0.75rem;
+    font-size: 0.8125rem;
+}
+
+.shrink {
+    flex-grow: 0;
+}
